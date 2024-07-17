@@ -1,0 +1,20 @@
+.box {
+  width: 100px;
+  height: 100px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box1 {
+  background: red;
+}
+.box2 {
+  background: blue;
+}
+.box3 {
+  background: green;
+}
+h1 {
+  background: purple;
+}
