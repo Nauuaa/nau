@@ -1,20 +1,13 @@
-.box {
-  width: 100px;
-  height: 100px;
-  color: #fff;
+* {
+  font-size: 1.5rem;
+}
+.container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  /* justify-content: flex-end; */
+  justify-content: space-around;
+  background-color: aqua;
+  /* gap: 40px; */
 }
-.box1 {
-  background: red;
-}
-.box2 {
-  background: blue;
-}
-.box3 {
-  background: green;
-}
-h1 {
-  background: purple;
+.box {
+  background-color: blue;
 }

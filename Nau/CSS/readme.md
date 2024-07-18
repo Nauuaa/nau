@@ -282,6 +282,7 @@ background: #555;
   - var(tên_biến)
 
 - CSS Position: thuộc tính postion cho phép điều chỉnh vị trí các phần tử trên trang web
+
   1.  Position: Static -> Đây là giá trị mặc định của postion
       -> Các phần tử HTML mà chúng tâ đã biết có vị trí cố định trên trang khi chưa can thiệp bằng CSS
   2.  Position: Relative -> Định vị so với vị trí ban đầu của nó 1 khoảng x:
@@ -292,4 +293,52 @@ background: #555;
         Tuy nhiên, không có bất kỳ không gian mới nào được tạo ra để chứa pần tử được định vị theo kiểu này, vì vậy các phần tử khác trong trang web vẫn có thể bị che khuất bởi phần tử được định vị theo kiểu relative
   3.  Position: Absolute -> Phần tử thực sự được đưa ra khỏi luồng ban đầu
       1. Nếu không có tổ tiên có position: relative thì phần tử được định vị theo top left corner webpage
-      2.
+      2. Phần tử được định vị theo tổ tiên gần nhất đặt position là relative
+  4.  Position: Fixed --> Fix cứng phần tử theo viewport (vùng hiển thị nội dung trên màn hình của trình duyệt web)
+
+  5.  Z-index --> dùng để xác định xem phần tử nào nằm cao hơn phần tử nào. Phần tử thấp hơn có thể bị che khuất
+  6.  Khi các phần tử có cùng kiểu vị trí (position) được định nghĩa là relative, absolute, hoặc fixed.
+  7.  Các phần tử static không bị ảnh hưởng bởi z-index
+
+  8.  Position: sticky --> định vị phần tử dính lại theo the cha gần nhất có thanh cuộn scroll bar
+
+* Page laypu & component layout:
+
+  - Page Layout: còn gọi là bố cục - dàn trang cơ bản là cách ta xếp đặt khối bố cục con ( component layout ) lên trên webpage
+    - Việc xếp đặt giúp cho trang web nhìn đẹp, thu hút người xem, và truyền tải nội dung 1 cách có trật tự, logic
+
+  1. Float Layout: có thể giúp dàn trang theo chiều ngang, hoặc chữ bao quanh ảnh như ví dụ bên
+
+  - khi sử dụng thuộc tích float: left, image bị trôi khổi luồng bình thường, các phần tử còn lại sẽ bao quanh phần tử image. Trong trường hợp muốn 1 phần tử nào đó không bị chèn ép để bao quanh hình. Ta cần sử dụng:
+    - clear: left (clear giá trị float bên trái)
+    - clear: right (clear bên phải)
+    - clear: both ( clear cả 2 hướng)
+  - Float layout đã cũ, và phức tạp khi trang web nhiều thành phần, trong trường hợp ta muốn xấy dựng 1 giao diện phức tạp người ta dùng các phương pháp khác tối ưu hơn. Ngày nay: Trong thiết kế hiện đại, lập trình viên thường không sử đụng thuộc tính float mà dùng các công cụ tốt hơn - ví dụ:
+    - Flexbox
+    - CSS Grid
+    - External Frameworks: Bootstrap
+
+  2. Flexbox: Bố cục linh hoạt
+     Theo mặc định, trục main axis sẽ nằm ngang, còn tục cross axis sẽ nằm dọc
+
+  - Các nhóm thuộc tính flexbox:
+    - FLex-Container(thuộc tính trong nhóm cha)
+      1. justify-content: căn các phần tử theo trục main axis
+         - flex-start: căn qua bên trái
+         - flex-end: căn qua bên phải
+         - center: căn giữa
+         - space-between: cách đều nhau, sát lề
+         - space-around: khoảng trắng xung quanh mỗi phần tử là = nhau
+         - space-evenly: cách đều nhau kể cả cách lề
+      2. align-items:
+      3. flex-wrap
+      4. align-content
+      5. flex-direction
+      6. flex-flow
+    - Flex-Item( thuộc tính trong nhóm con)
+      - align-self
+      - flex-frow
+      - flex-shrink
+      - flex-basis
+      - order
+      - flex
